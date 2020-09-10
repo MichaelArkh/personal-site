@@ -40,14 +40,14 @@ export default function Header() {
     return (
         <AppBar className={classes.root} style={{ marginBottom: "40px" }} position="static">
             <Toolbar>
-                <Typography style={{cursor: "pointer"}} onClick={() => history.push("/")} variant="h5" className={classes.title}>
+                <Typography variant="h5" className={classes.title}>
                     Michael Arkhangelskiy
                 </Typography>
 
             {isTabletOrMobile ?
             <div>
-                <IconButton edge="end" className={classes.menuButton} color="inherit" aria-label="menu">
-                    <MenuIcon onClick={handleClick} />
+                <IconButton edge="end" onClick={handleClick} className={classes.menuButton} color="inherit" aria-label="menu">
+                    <MenuIcon />
                 </IconButton>
                 <Menu
                         id="simple-menu"
@@ -56,12 +56,14 @@ export default function Header() {
                         open={Boolean(anchorEl)}
                         onClose={handleClose}
                     >
+                        <MenuItem onClick={() => {handleClose(); history.push("/");}}>Home</MenuItem>
                         <MenuItem onClick={() => {handleClose(); history.push("/exp");}}>Experience</MenuItem>
                         <MenuItem onClick={() => {handleClose(); history.push("/proj");}}>Projects</MenuItem>
-                        <MenuItem onClick={() => {handleClose(); history.push("/exp");}}>Resume</MenuItem>
+                        <MenuItem onClick={() => {handleClose();}}>Resume</MenuItem>
                     </Menu>
             </div> :
             <div>
+              <Button onClick={() => history.push("/")}>Home</Button>
                 <Button onClick={() => history.push("/exp")}>Experience</Button>
                 <Button onClick={() => history.push("/proj")}>Projects</Button>
                 <Button >Resume</Button>

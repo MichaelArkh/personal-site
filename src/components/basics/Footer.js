@@ -9,6 +9,6 @@ import IconButton from '@material-ui/core/IconButton';
 export default function Footer() {
 
     return (
-        <h1>ok</h1>
+        <h1></h1>
     );
 }
