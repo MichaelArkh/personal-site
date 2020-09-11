@@ -6,7 +6,7 @@ import Paper from '@material-ui/core/Paper';
 import img from '../../content/pic.jpg';
 import { Typography } from '@material-ui/core';
 import content from '../../content/home.json';
-import Container from '@material-ui/core/Container';
+
 import ReactHtmlParser from 'react-html-parser';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -20,8 +20,9 @@ import { useHistory } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-  }
+  },
 }));
+
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -47,7 +48,7 @@ export default function HomeScreen() {
 
   return (
     <Page>
-      <Container>
+      
         <Grid container className={classes.root} spacing={3}>
           <Grid item md={4} xs={12} align="center">
             <img alt="Portrait" src={img} style={{ borderRadius: "50%", width: '60%' }} />
@@ -108,7 +109,7 @@ export default function HomeScreen() {
           </Grid>
 
         </Grid>
-      </Container>
+      
     </Page>
   );
 }

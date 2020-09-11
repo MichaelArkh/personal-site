@@ -1,14 +1,21 @@
-import React, { useState } from 'react';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import SettingsIcon from '@material-ui/icons/Settings';
-import IconButton from '@material-ui/core/IconButton';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+      width: '100%',
+      background: theme.palette.background.paper,
+      position: "absolute",
+      bottom: 0,
+    }
+  }));
 
 export default function Footer() {
+    const classes = useStyles();
 
     return (
-        <h1></h1>
+        <div className={classes.root}>
+            
+        </div>
     );
 }
