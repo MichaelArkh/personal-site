@@ -11,7 +11,6 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import { useHistory } from "react-router-dom";
 import Link from '@material-ui/core/Link';
-import NavLink from 'react-router-dom/NavLink';
 import { useLocation } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
