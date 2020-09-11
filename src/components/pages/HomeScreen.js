@@ -88,7 +88,7 @@ export default function HomeScreen() {
                         <Table className={classes.table} aria-label="customized table">
                           <TableHead>
                             <TableRow>
-                               <StyledTableCell justifyContent="center" align="center">{index == 0 ? <MenuBook fontSize="small" style={{marginRight: '10px'}}/> : index == 1 ? <AccountTree fontSize="small" style={{marginRight: '10px'}}/> : <Create fontSize="small" style={{marginRight: '10px'}}/>}{value.name}</StyledTableCell>
+                               <StyledTableCell align="center">{index === 0 ? <MenuBook fontSize="small" style={{marginRight: '10px'}}/> : index === 1 ? <AccountTree fontSize="small" style={{marginRight: '10px'}}/> : <Create fontSize="small" style={{marginRight: '10px'}}/>}{value.name}</StyledTableCell>
                             </TableRow>
                           </TableHead>
                           <TableBody>
