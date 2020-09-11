@@ -7,6 +7,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import HomeScreen from './components/pages/HomeScreen.js'
 import Experience from './components/pages/Experience.js'
 import Projects from './components/pages/Projects.js'
+import Contact from './components/pages/Contact.js'
 
 const darkTheme = createMuiTheme({
   palette: {
@@ -18,6 +19,9 @@ const darkTheme = createMuiTheme({
         main: '#5c6bc0',
       },
   },
+  typography: {
+    htmlFontSize: 14,
+  }
 });
 
 ReactDOM.render(
@@ -27,6 +31,7 @@ ReactDOM.render(
       <Route exact path='/' component={HomeScreen} />
       <Route path='/exp' component={Experience} />
       <Route path='/proj' component={Projects} />
+      <Route path='/contact' component={Contact} />
     </Router>
     </ThemeProvider>,
   document.getElementById('root')

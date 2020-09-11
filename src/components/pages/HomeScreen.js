@@ -14,7 +14,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
-import { SendRounded } from '@material-ui/icons';
+import { SendRounded, Create, MenuBook, AccountTree } from '@material-ui/icons';
 import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
@@ -51,7 +51,7 @@ export default function HomeScreen() {
       
         <Grid container className={classes.root} spacing={3}>
           <Grid item md={4} xs={12} align="center">
-            <img alt="Portrait" src={img} style={{ borderRadius: "50%", width: '60%' }} />
+            <img alt="Portrait" src={img} style={{ borderRadius: "50%", width: '70%' }} />
           </Grid>
           <Grid item md={8} xs={12}>
 
@@ -88,7 +88,7 @@ export default function HomeScreen() {
                         <Table className={classes.table} aria-label="customized table">
                           <TableHead>
                             <TableRow>
-                               <StyledTableCell align="center">{value.name}</StyledTableCell>
+                               <StyledTableCell justifyContent="center" align="center">{index == 0 ? <MenuBook fontSize="small" style={{marginRight: '10px'}}/> : index == 1 ? <AccountTree fontSize="small" style={{marginRight: '10px'}}/> : <Create fontSize="small" style={{marginRight: '10px'}}/>}{value.name}</StyledTableCell>
                             </TableRow>
                           </TableHead>
                           <TableBody>

@@ -59,6 +59,7 @@ export default function Header() {
                         <MenuItem onClick={() => {handleClose(); history.push("/");}}>Home</MenuItem>
                         <MenuItem onClick={() => {handleClose(); history.push("/exp");}}>Experience</MenuItem>
                         <MenuItem onClick={() => {handleClose(); history.push("/proj");}}>Projects</MenuItem>
+                        <MenuItem onClick={() => {handleClose(); history.push("/contact");}}>Contact</MenuItem>
                         <MenuItem onClick={() => {handleClose();}}>Resume</MenuItem>
                     </Menu>
             </div> :
@@ -66,6 +67,7 @@ export default function Header() {
               <Button onClick={() => history.push("/")}>Home</Button>
                 <Button onClick={() => history.push("/exp")}>Experience</Button>
                 <Button onClick={() => history.push("/proj")}>Projects</Button>
+                <Button onClick={() => history.push("/contact")}>Contact</Button>
                 <Button >Resume</Button>
             </div> 
             }
