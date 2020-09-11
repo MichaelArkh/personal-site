@@ -19,6 +19,13 @@ const darkTheme = createMuiTheme({
         main: '#5c6bc0',
       },
   },
+  props: {
+    // Style sheet name ⚛️
+    MuiPaper: {
+      // Name of the rule
+      elevation: 5
+    },
+  },
   typography: {
     htmlFontSize: 14,
   }

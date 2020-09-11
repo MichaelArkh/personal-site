@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -10,6 +10,9 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import { useHistory } from "react-router-dom";
+import Link from '@material-ui/core/Link';
+import NavLink from 'react-router-dom/NavLink';
+import { useLocation } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -28,6 +31,11 @@ export default function Header() {
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
     const [anchorEl, setAnchorEl] = useState(null);
     const history = useHistory();
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
@@ -38,10 +46,10 @@ export default function Header() {
       };
 
     return (
-        <AppBar className={classes.root} style={{ marginBottom: "40px" }} position="static">
+        <AppBar className={classes.root} style={{ marginBottom: "30px" }} position="static">
             <Toolbar>
                 <Typography variant="h5" className={classes.title}>
-                    Michael Arkhangelskiy
+                    <Link color="inherit" style={{cursor: 'pointer'}} onClick={() => history.push("/")}>Michael Arkhangelskiy</Link>
                 </Typography>
 
             {isTabletOrMobile ?

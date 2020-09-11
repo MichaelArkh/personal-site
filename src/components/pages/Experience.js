@@ -4,22 +4,24 @@ import Page from '../basics/Page';
 import { Typography } from '@material-ui/core';
 import content from '../../content/home.json';
 import Paper from '@material-ui/core/Paper';
+import Box from '@material-ui/core/Box';
 
 export default function Experience() {
 
   return (
     <Page>
-      <Typography variant="h4">
+      <Typography variant="h4" style={{marginBottom: '30px'}}>
         Experience
         </Typography>
         {content.experience.map((value, index) => {
           return (
-            <Grid key={index} container alignItems="center"
+            <Grid key={index} container 
             justify="center"  style={{marginBottom: '15px'}} component={Paper}>
               <Grid item  s={12} md={2}>
-                <img alt="img" style={{width: '200px'}} src={process.env.PUBLIC_URL + value.image} />
+                <img alt="img" style={{width: '210px'}} src={process.env.PUBLIC_URL + value.image} />
               </Grid>
               <Grid item s={12} md={10}>
+                <Box pl={2} pt={1}>
                 <Typography variant="h6">
                   {value.title}
                 </Typography>
@@ -36,6 +38,7 @@ export default function Experience() {
                   )
                 })}
                 </ul>
+                </Box>
               </Grid>
             </Grid>
           )

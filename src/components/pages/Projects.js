@@ -5,12 +5,13 @@ import { Typography } from '@material-ui/core';
 import content from '../../content/home.json';
 import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link';
+import Box from '@material-ui/core/Box';
 
 export default function Projects() {
 
     return (
       <Page>
-        <Typography variant="h4">
+        <Typography variant="h4" style={{marginBottom: '30px'}}>
         Projects
         </Typography>
         <Grid  container
@@ -19,7 +20,8 @@ export default function Projects() {
           return (
             
               <Grid key={index} item s={12} md={6}>
-                <Paper>
+                <Paper >
+                  <Box p={2}>
                 <Typography variant="h6">
                   {value.name}
                 </Typography>
@@ -39,7 +41,9 @@ export default function Projects() {
                   <Link href={value.url} variant="body1" color="secondary">Url</Link>
                   {value.demo !== "" ? " · ":""}
                   {value.demo !== "" ? <Link variant="body1" href={value.demo} color="secondary">Demo</Link>:""}
+                  </Box>
                 </Paper>
+
               </Grid>
               
           )
