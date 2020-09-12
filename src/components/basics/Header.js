@@ -13,6 +13,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import { useHistory } from "react-router-dom";
 import Link from '@material-ui/core/Link';
 import { useLocation } from "react-router-dom";
+import resume from '../../content/resume.pdf';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -69,7 +70,7 @@ export default function Header(props) {
                         <MenuItem onClick={() => {handleClose(); history.push("/exp");}}>Experience</MenuItem>
                         <MenuItem onClick={() => {handleClose(); history.push("/proj");}}>Projects</MenuItem>
                         <MenuItem onClick={() => {handleClose(); history.push("/contact");}}>Contact</MenuItem>
-                        <MenuItem onClick={() => {handleClose();}}>Resume</MenuItem>
+                        <MenuItem onClick={() => {handleClose();}}><Link color="inherit" href={resume} target="_blank">Resume</Link></MenuItem>
                     </Menu>
             </div> :
             <div>
@@ -77,7 +78,7 @@ export default function Header(props) {
                 <Button onClick={() => history.push("/exp")}>Experience</Button>
                 <Button onClick={() => history.push("/proj")}>Projects</Button>
                 <Button onClick={() => history.push("/contact")}>Contact</Button>
-                <Button >Resume</Button>
+                <Link href={resume} target="_blank"><Button >Resume</Button></Link>
             </div> 
             }
                 
