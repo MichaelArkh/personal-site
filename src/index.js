@@ -2,45 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import CssBaseline from "@material-ui/core/CssBaseline";
 import HomeScreen from './components/pages/HomeScreen.js'
 import Experience from './components/pages/Experience.js'
 import Projects from './components/pages/Projects.js'
 import Contact from './components/pages/Contact.js'
 
-const darkTheme = createMuiTheme({
-  palette: {
-      type: 'dark',
-      primary: {
-        main: '#607D8B',
-      },
-      secondary: {
-        main: '#5c6bc0',
-      },
-  },
-  props: {
-    // Style sheet name ⚛️
-    MuiPaper: {
-      // Name of the rule
-      elevation: 5
-    },
-  },
-  typography: {
-    htmlFontSize: 14,
-  }
-});
-
 ReactDOM.render(
-  <ThemeProvider theme={darkTheme}>
-    <CssBaseline />
     <Router>
       <Route exact path='/' component={HomeScreen} />
       <Route path='/exp' component={Experience} />
       <Route path='/proj' component={Projects} />
       <Route path='/contact' component={Contact} />
-    </Router>
-    </ThemeProvider>,
+    </Router>,
   document.getElementById('root')
 );
 

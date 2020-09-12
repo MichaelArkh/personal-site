@@ -8,24 +8,26 @@ import { useMediaQuery } from 'react-responsive'
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Menu from '@material-ui/core/Menu';
+import Brightness7 from '@material-ui/icons/Brightness7';
 import MenuItem from '@material-ui/core/MenuItem';
 import { useHistory } from "react-router-dom";
 import Link from '@material-ui/core/Link';
 import { useLocation } from "react-router-dom";
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
     },
     menuButton: {
-      marginRight: theme.spacing(2),
+      marginRight: theme.spacing(.5),
     },
     title: {
       flexGrow: 1,
     },
   }));
 
-export default function Header() {
+export default function Header(props) {
     const classes = useStyles();
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
     const [anchorEl, setAnchorEl] = useState(null);
@@ -79,7 +81,11 @@ export default function Header() {
             </div> 
             }
                 
-            
+                <IconButton onClick={() => {
+                      props.call();
+                    }}  edge="end" color="inherit" aria-label="menu">
+                    <Brightness7 />
+                </IconButton>
             </Toolbar>
         </AppBar>
     );
