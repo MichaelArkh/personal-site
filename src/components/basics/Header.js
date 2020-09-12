@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Header(props) {
     const classes = useStyles();
-    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 959px)' })
     const [anchorEl, setAnchorEl] = useState(null);
     const history = useHistory();
     const { pathname } = useLocation();
@@ -50,10 +50,15 @@ export default function Header(props) {
     return (
         <AppBar className={classes.root} style={{ marginBottom: "30px" }} position="static">
             <Toolbar>
-                <Typography variant="h5" className={classes.title}>
+            {isTabletOrMobile ?
+                <Typography variant="h6" className={classes.title}>
                     <Link color="inherit" style={{cursor: 'pointer'}} onClick={() => history.push("/")}>Michael Arkhangelskiy</Link>
                 </Typography>
-
+            : 
+            <Typography variant="h5" className={classes.title}>
+              <Link color="inherit" style={{cursor: 'pointer'}} onClick={() => history.push("/")}>Michael Arkhangelskiy</Link>
+            </Typography>
+            }
             {isTabletOrMobile ?
             <div>
                 <IconButton edge="end" onClick={handleClick} className={classes.menuButton} color="inherit" aria-label="menu">
