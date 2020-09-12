@@ -51,7 +51,7 @@ export default function HomeScreen() {
 
       <Grid container className={classes.root} spacing={3}>
         <Grid item md={4} xs={12} align="center">
-          <img alt="Portrait" src={img} style={{ borderRadius: "50%", width: '85%'}} />
+          <img alt="Portrait" src={img} style={{ borderRadius: "50%", width: '80%'}} />
         </Grid>
         <Grid item md={8} xs={12}>
 
@@ -76,11 +76,11 @@ export default function HomeScreen() {
             <Grid item xs={12}>
               <Typography variant="h5">
                 Extras
-                      </Typography>
+              </Typography>
 
             </Grid>
 
-            <Grid container justify="center" align="center" spacing={3}>
+            <Grid container justify="center" align="center" spacing={2}>
               {content.facts.map((value, index) => {
                 return (
                   <Grid key={index} item xs={12} md={4}  >
@@ -129,7 +129,7 @@ export default function HomeScreen() {
 
             </Grid>
 
-            <Grid container justify="center" align="center" spacing={3}>
+            <Grid container justify="center" align="center" spacing={2}>
               {content.redirects.map((value, index) => {
                 return (
                   <Grid key={index} item xs={12} md={4}  >
