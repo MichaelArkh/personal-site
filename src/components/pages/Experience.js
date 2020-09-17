@@ -10,39 +10,44 @@ export default function Experience() {
 
   return (
     <Page>
-      <Typography variant="h4" style={{marginBottom: '30px'}}>
+      <Typography variant="h4" style={{ marginBottom: '30px' }}>
         Experience
         </Typography>
+      <Grid container spacing={2}>
         {content.experience.map((value, index) => {
           return (
-            <Grid key={index} container 
-            justify="center"  style={{marginBottom: '15px'}} component={Paper}>
-              <Grid item  s={12} md={2}>
-                <img alt="img" style={{width: '210px'}} src={process.env.PUBLIC_URL + value.image} />
-              </Grid>
-              <Grid item s={12} md={10}>
-                <Box pl={2} pt={1}>
-                <Typography variant="h6">
-                  {value.title}
-                </Typography>
-                <Typography variant="body1">
-                  {value.subtitle}
-                </Typography>
-                <Typography variant="body1">
-                  {value.dates}
-                </Typography>
-                <ul>
-                {value.info.map((value, index) => {
-                  return (
-                    <li key={index}>{value}</li>
-                  )
-                })}
-                </ul>
-                </Box>
+            <Grid key={index} container item>
+              <Grid container component={Paper}>
+                <Grid item xs={12} md={2}>
+                  <Grid container justify="center" alignItems="center">
+                    <img alt="img" style={{ width: '100%', maxWidth: '210px' }} src={process.env.PUBLIC_URL + value.image} />
+                  </Grid>
+                </Grid>
+                <Grid item xs={12} md={10}>
+                  <Box pl={2} pt={1}>
+                    <Typography variant="h6">
+                      {value.title}
+                    </Typography>
+                    <Typography variant="body1">
+                      {value.subtitle}
+                    </Typography>
+                    <Typography variant="body1">
+                      {value.dates}
+                    </Typography>
+                    <ul>
+                      {value.info.map((value, index) => {
+                        return (
+                          <li key={index}>{value}</li>
+                        )
+                      })}
+                    </ul>
+                  </Box>
+                </Grid>
               </Grid>
             </Grid>
           )
         })}
+      </Grid>
     </Page>
   );
 }
