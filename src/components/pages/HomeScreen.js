@@ -16,6 +16,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import { SendRounded, Create, MenuBook, AccountTree } from '@material-ui/icons';
 import { useHistory } from "react-router-dom";
+import Hidden from '@material-ui/core/Hidden';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -51,7 +52,19 @@ export default function HomeScreen() {
 
       <Grid container className={classes.root} spacing={3}>
         <Grid item md={4} xs={12} align="center">
-          <img alt="Portrait" src={img} style={{ borderRadius: "50%", width: '80%'}} />
+          <Grid container spacing={2}>
+            <Hidden smDown>
+              <Grid item md={12} xs={false} zeroMinWidth={true}>
+                <Typography variant="h5">
+                  ‎‎‎‎‏‏‎ ‎
+                </Typography>
+              </Grid>
+            </Hidden>
+            <Grid item xs={12}>
+              <img alt="Portrait" src={img} style={{ borderRadius: "50%", width: '70%' }} />
+            </Grid>
+          </Grid>
+
         </Grid>
         <Grid item md={8} xs={12}>
 
