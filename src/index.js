@@ -6,6 +6,11 @@ import HomeScreen from './components/pages/HomeScreen.js'
 import Experience from './components/pages/Experience.js'
 import Projects from './components/pages/Projects.js'
 import Contact from './components/pages/Contact.js'
+import ReactGA from "react-ga4";
+import env from "react-dotenv";
+
+ReactGA.initialize(window.env.G_KEY);
+ReactGA.send("pageview");
 
 ReactDOM.render(
     <Router>
