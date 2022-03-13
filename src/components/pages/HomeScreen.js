@@ -6,6 +6,7 @@ import Paper from '@material-ui/core/Paper';
 import img from '../../content/pic.jpg';
 import { Typography } from '@material-ui/core';
 import content from '../../content/home.json';
+import Link from '@material-ui/core/Link';
 
 import ReactHtmlParser from 'react-html-parser';
 import Table from '@material-ui/core/Table';
@@ -79,11 +80,11 @@ export default function HomeScreen() {
               <Typography variant="body1">
                 {ReactHtmlParser(content.intro)}
               </Typography>
-
+              <Link href={content.url.url} variant="body1" color="secondary">{content.url.text}</Link>
             </Grid>
           </Grid>
         </Grid>
-
+{/*
         <Grid item xs={12}>
           <Grid container spacing={2}>
             <Grid item xs={12}>
@@ -132,7 +133,7 @@ export default function HomeScreen() {
             </Grid>
           </Grid>
         </Grid>
-
+*/}
         <Grid item xs={12}>
           <Grid container spacing={2}>
             <Grid item xs={12}>
