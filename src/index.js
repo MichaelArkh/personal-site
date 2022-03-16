@@ -2,10 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
-import HomeScreen from './components/pages/HomeScreen.js'
-import Experience from './components/pages/Experience.js'
-import Projects from './components/pages/Projects.js'
-import Contact from './components/pages/Contact.js'
+import HomeScreen from './components/pages/HomeScreen.js';
+import Experience from './components/pages/Experience.js';
+import Projects from './components/pages/Projects.js';
+import Contact from './components/pages/Contact.js';
+import Publications from './components/pages/Publications.js';
 import ReactGA from "react-ga4";
 
 ReactGA.initialize(window.env.G_KEY);
@@ -17,6 +18,7 @@ ReactDOM.render(
       <Route path='/exp' component={Experience} />
       <Route path='/proj' component={Projects} />
       <Route path='/contact' component={Contact} />
+      <Route path='/pub' component={Publications} />
     </Router>,
   document.getElementById('root')
 );

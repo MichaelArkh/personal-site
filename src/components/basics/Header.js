@@ -73,6 +73,7 @@ export default function Header(props) {
                     >
                         <MenuItem onClick={() => {handleClose(); history.push("/");}}>Home</MenuItem>
                         <MenuItem onClick={() => {handleClose(); history.push("/exp");}}>Experience</MenuItem>
+                        <MenuItem onClick={() => {handleClose(); history.push("/pub");}}>Publications</MenuItem>
                         <MenuItem onClick={() => {handleClose(); history.push("/proj");}}>Projects</MenuItem>
                         <MenuItem onClick={() => {handleClose(); history.push("/contact");}}>Contact</MenuItem>
                         <MenuItem onClick={() => {handleClose();}}><Link color="inherit" href={resume} target="_blank">Resume</Link></MenuItem>
@@ -81,6 +82,7 @@ export default function Header(props) {
             <div>
               <Button onClick={() => history.push("/")}>Home</Button>
                 <Button onClick={() => history.push("/exp")}>Experience</Button>
+                <Button onClick={() => history.push("/pub")}>Publications</Button>
                 <Button onClick={() => history.push("/proj")}>Projects</Button>
                 <Button onClick={() => history.push("/contact")}>Contact</Button>
                 <Link href={resume} target="_blank"><Button >Resume</Button></Link>
