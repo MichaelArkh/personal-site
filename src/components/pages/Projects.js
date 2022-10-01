@@ -15,12 +15,12 @@ export default function Projects() {
         Projects
         </Typography>
         <Grid  container
-              style={{marginBottom: '15px'}} spacing={2}>
+              style={{marginBottom: '15px'}} spacing={2} alignItems="stretch">
         {content.projects.map((value, index) => {
           return (
             
-              <Grid key={index} item s={12} md={6}>
-                <Paper >
+              <Grid key={index} item s={12} md={6} style={{width: '100%'}}>
+                <Paper style={{height: "100%", width: "100%", position: "relative"}}>
                   <Box p={2}>
                 <Typography variant="h6">
                   {value.name}
@@ -38,9 +38,12 @@ export default function Projects() {
                   )
                 })}
                 </ul>
-                  <Link href={value.url} variant="body1" color="secondary">Url</Link>
-                  {value.demo !== "" ? " · ":""}
-                  {value.demo !== "" ? <Link variant="body1" href={value.demo} color="secondary">Demo</Link>:""}
+                  <Box style={{position: "absolute", bottom:"5px"}}>
+
+                    <Link variant="body1" href={value.url} color={value.url !== "#" ? "secondary": "error"} style={value.url === "#" ? {cursor: "default", textDecoration: "none"} : {}}>Url</Link>
+                    {" · "}
+                    <Link variant="body1" href={value.demo} color={value.demo !== "#" ? "secondary": "error"} style={value.demo === "#" ? {cursor: "default", textDecoration: "none"} : {}}>Demo</Link>
+                  </Box>
                   </Box>
                 </Paper>
 
