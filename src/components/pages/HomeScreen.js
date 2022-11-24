@@ -143,7 +143,7 @@ export default function HomeScreen() {
 
             </Grid>
 
-            <Grid container justify="center" align="center" spacing={2}>
+            <Grid container justifyContent="center" align="center" spacing={2}>
               {content.redirects.map((value, index) => {
                 return (
                   <Grid key={index} item xs={12} md={4}  >

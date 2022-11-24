@@ -40,9 +40,9 @@ export default function Projects() {
                 </ul>
                   <Box style={{position: "absolute", bottom:"5px"}}>
 
-                    <Link variant="body1" href={value.url} color={value.url !== "#!" ? "secondary": "error"} style={value.url === "#!" ? {cursor: "default", textDecoration: "none"} : {}}>Url</Link>
+                    <Link variant="body1" href={value.url} color={value.url !== "#!" ? "secondary": "error"} style={value.url === "#!" ? {cursor: "default", textDecoration: "line-through"} : {}}>Url</Link>
                     {" · "}
-                    <Link variant="body1" href={value.demo} color={value.demo !== "#!" ? "secondary": "error"} style={value.demo === "#!" ? {cursor: "default", textDecoration: "none"} : {}}>Demo</Link>
+                    <Link variant="body1" href={value.demo} color={value.demo !== "#!" ? "secondary": "error"} style={value.demo === "#!" ? {cursor: "default", textDecoration: "line-through"} : {}}>Demo</Link>
                   </Box>
                   </Box>
                 </Paper>

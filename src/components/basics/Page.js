@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from '@material-ui/core/Container';
 import Header from './Header';
 import Footer from './Footer';
 
-const darkTheme = createMuiTheme({
+const darkTheme = createTheme({
     palette: {
         type: 'dark',
         primary: {
@@ -28,7 +28,7 @@ const darkTheme = createMuiTheme({
     }
   });
   
-  const lightTheme = createMuiTheme({
+  const lightTheme = createTheme({
     palette: {
         type: 'light',
         primary: {

@@ -22,7 +22,7 @@ export default function Publications() {
             <Grid key={index} container item>
               <Grid container component={Paper}>
                 <Grid item xs={12} md={2}>
-                  <Grid container justify="center" alignItems="center">
+                  <Grid container justifyContent="center" alignItems="center">
                     <img alt="img" style={{ width: '100%', maxWidth: '210px' }} src={process.env.PUBLIC_URL + value.urls.image} />
                   </Grid>
                 </Grid>
