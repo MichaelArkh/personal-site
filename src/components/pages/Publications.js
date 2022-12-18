@@ -29,7 +29,7 @@ export default function Publications() {
                 <Grid item xs={12} md={10} style={{ height: "inherit" }}>
                   <Box pl={2} pt={1} style={{ height: "inherit" }}>
                     <Tooltip title={value.urls.name} placement="right-end" arrow>
-                      <Link href={value.urls.url} underline="always" variant="h6" color="secondary">
+                      <Link href={value.urls.url} target="_blank" underline="always" variant="h6" color="secondary">
                         {value.title}
                       </Link>
                     </Tooltip>
