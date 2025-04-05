@@ -19,7 +19,7 @@ export const projectResolvers = {
       return await Project.findByIdAndUpdate(
         id,
         updates,
-        { new: true }
+        { new: true, runValidators: true }
       );
     },
     deleteProject: async (_, { id }) => {

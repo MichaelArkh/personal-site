@@ -3,16 +3,12 @@ import { Profile } from '../models/Profile.js';
 export const profileResolvers = {
     Query: {
         profile: async () => {
-            // Get the first profile or create a default one if none exists
-            let profile = await Profile.findOne();
-
-            return profile;
+            return await Profile.findOne();
         }
     },
 
     Mutation: {
         updateProfile: async (_, { id, ...updates }) => {
-            // Find the first profile or create a new one
             return await Profile.findByIdAndUpdate(
                 id,
                 updates,
