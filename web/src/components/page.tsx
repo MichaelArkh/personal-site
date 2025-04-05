@@ -22,7 +22,10 @@ const Page: React.FC<PageProps> = ({ children, loading, ...props }) => {
                 palette: {
                     mode: darkMode ? 'dark' : 'light',
                     primary: {
-                        main: darkMode ? '#90caf9' : '#7A6F63'
+                        main: darkMode ? '#90caf9' : '#7A6F63',
+                    },
+                    background: {
+                        default: darkMode ? '#121212' : '#f0f0f0', // Light gray background for light mode
                     },
                 },
             }),

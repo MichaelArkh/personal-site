@@ -2,7 +2,7 @@ import { Publication } from '../models/Publication.js';
 
 export const publicationResolvers = {
   Query: {
-    publications: async (orderBy) => {
+    publications: async (_, { orderBy }) => {
         const sortField = orderBy || "order"; 
         return await Publication.find().sort({ [sortField]: 1 }); 
     },
