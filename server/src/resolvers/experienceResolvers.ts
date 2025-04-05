@@ -2,7 +2,7 @@ import { Experience } from '../models/Experience.js';
 
 export const experienceResolvers = {
   Query: {
-    experiences: async (orderBy) => {
+    experiences: async (_, { orderBy }) => {
       const sortField = orderBy || "order";
       return await Experience.find().sort({ [sortField]: 1 }); 
     },

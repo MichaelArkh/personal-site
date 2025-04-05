@@ -1,8 +1,8 @@
-import { Project } from '../models/Projects.js';
+import { Project } from '../models/Project.js';
 
 export const projectResolvers = {
   Query: {
-    projects: async (orderBy) => {
+    projects: async (_, { orderBy }) => {
         const sortField = orderBy || "order"; 
         return await Project.find().sort({ [sortField]: 1 }); 
     },
